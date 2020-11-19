@@ -5,7 +5,7 @@ var mysql = require('mysql');
 var port = 9019
 app.use(express.static('public'));
 app.get('/', function (req, res) {
-  res.sendFile(__dirname + "art.html");
+  res.sendFile(__dirname + "/art.html");
 })
 
 function openSQL() {
