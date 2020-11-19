@@ -17,6 +17,11 @@ $(document).ready(function () {
   $(".btn-login").click(getMatches);
 
   $(".btn-createaccount").click(makeAccount);
+
+  $(".dropdown-menu li a").click(function(){
+    $(this).parents(".btn-group").find('.selection').text($(this).text());
+    operation=$(this).text().split(" ").pop();  // Get last word
+    });
 });
 
 function getMatches() {
