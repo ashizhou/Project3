@@ -23,7 +23,7 @@ function openSQL() {
 var con = openSQL();
 
 app.get('/list', function(req,res) {
-  query = "SELECT * FROM Userinfo";
+  query = "SELECT * FROM art";
   con.query(query, function(err, result, fields) {
     if(err) throw err;
     console.log(result)
