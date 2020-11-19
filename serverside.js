@@ -1,15 +1,15 @@
 var express = require('express');
 var app = express();
 var fs = require("fs");
-var myseql = require('mysql');
-var port = 9016
+var mysql = require('mysql');
+var port = 9019
 app.use(express.static('public'));
-app.get('/', function, req, res) {
+app.get('/', function (req, res) {
   res.sendFile(__dirname + "art.html");
 })
 
 function openSQL() {
-  var con mysql.createconnection ({
+  var con = mysql.createConnection ({
     host:"localhost",
     user: "stutz2",
     password: "S219536",
